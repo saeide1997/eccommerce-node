@@ -53,7 +53,10 @@ MyModel.find({})
 //     })
 // })
 
-app.use("/api/users", userRoute);
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
+app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
 app.use("/api/product", productRoute)
 app.use("/api/cart", cartRoute)

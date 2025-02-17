@@ -67,7 +67,7 @@ router.get("/orders", async(req, res)=>{
 //GET MONTHLY INCOME
 router.get("/income", async(req, res)=>{
     const date = new Date()
-    const prevMonth = new Date( date.setMonth(date.getMonth()-2))
+    const prevMonth = new Date( date.setMonth(date.getMonth()-10))
 
     try{
         const income =await Order.aggregate([

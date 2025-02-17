@@ -23,17 +23,17 @@ mongoose.connect(
         console.log(err);
 });
 
-const clusterName = ['products', 'carts', 'goods', 'orders', 'users']
+// const clusterName = ['products', 'carts', 'goods', 'orders', 'users']
 
-const MyModel = mongoose.model('users', new mongoose.Schema({}, { strict: false }));
+// const MyModel = mongoose.model('users', new mongoose.Schema({}, { strict: false }));
 
-MyModel.find({})
-  .then(data => {
-    fs.writeFileSync('users.json', JSON.stringify(data, null, 2));
-    console.log('Data exported successfully!');
-    mongoose.connection.close();
-  })
-  .catch(err => console.error(err));
+// MyModel.find({})
+//   .then(data => {
+//     fs.writeFileSync('users.json', JSON.stringify(data, null, 2));
+//     console.log('Data exported successfully!');
+//     mongoose.connection.close();
+//   })
+//   .catch(err => console.error(err));
 // image storage engie
 // const storage = multer.diskStorage({
 //     destination: './upload/images',

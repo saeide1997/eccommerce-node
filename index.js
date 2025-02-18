@@ -62,6 +62,6 @@ app.use("/api/product", productRoute)
 app.use("/api/cart", cartRoute)
 app.use("/api/orders", orderRoute)
 
-app.listen(7000, () => {
+app.listen( process.env.PORT, () => {
     console.log("Server Is Running On Port: 7000");
 })
